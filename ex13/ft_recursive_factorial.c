@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 17:41:39 by dofranci          #+#    #+#             */
-/*   Updated: 2022/05/24 01:42:29 by dofranci         ###   ########.fr       */
+/*   Created: 2022/05/22 17:45:23 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/22 17:46:06 by dofranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_recursive_factorial(int nb)
 {
-	*div = a / b;
-	*mod = a % b;
+	if (nb == 1 || nb == 0)
+		return (1);
+	else if (nb < 0)
+		return (0);
+	else
+		return (nb * ft_recursive_factorial(nb - 1));
 }

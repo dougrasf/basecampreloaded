@@ -1,9 +1,21 @@
-int ft_strlen(char *str)
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/22 17:53:13 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/22 17:53:51 by dofranci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+int	ft_strlen(char *str)
 {
-	int  count;
+	int	count;
 
 	count = 0;
-	while(str[count] != '\0')
+	while (str[count] != '\0')
 	{
 		count++;
 	}

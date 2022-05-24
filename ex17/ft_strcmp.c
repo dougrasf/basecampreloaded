@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_strcm.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 17:41:39 by dofranci          #+#    #+#             */
-/*   Updated: 2022/05/24 01:42:29 by dofranci         ###   ########.fr       */
+/*   Created: 2022/05/22 17:54:10 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/22 17:54:46 by dofranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_strcmp(char *s1, char *s2)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	count;
+
+	count = 0;
+	while (s1[count] || s2[count] != '\0')
+	{
+		if (s1[count] != s2[count])
+		{
+			return ((unsigned char)s1[count] - (unsigned char)s2[count]);
+		}
+		count++;
+	}
+	return (0);
 }

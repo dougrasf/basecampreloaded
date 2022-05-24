@@ -1,17 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_print_aphabet.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 17:41:39 by dofranci          #+#    #+#             */
-/*   Updated: 2022/05/24 01:42:29 by dofranci         ###   ########.fr       */
+/*   Created: 2022/05/22 17:34:56 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/24 01:34:47 by dofranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+void	ft_putchar(char c);
+
+void	ft_print_alphabet(void)
 {
-	*div = a / b;
-	*mod = a % b;
+	char	letter;
+
+	letter = 'a';
+	while (letter <= 'z')
+	{
+		ft_putchar(letter);
+		letter++;
+	}
 }

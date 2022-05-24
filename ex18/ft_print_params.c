@@ -1,12 +1,21 @@
-#include <unistd.h>
-void	ft_putchar (char c)
-{
-	write(1, &c, 1);
-}
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/05/24 02:26:06 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/24 02:27:34 by dofranci         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void	ft_print_params(char  *str)
+void	ft_putchar(char c);
+
+void	ft_print_params(char *str)
 {
-	int index;
+	int	index;
+
 	index = 0;
 	while (str[index] != '\0')
 	{
@@ -18,11 +27,12 @@ void	ft_print_params(char  *str)
 
 int	main(int argc, char **argv)
 {
-	int count;
+	int	count;
+
 	count = 1;
-	if(argc > 1)
-	{ 
-		while(count < argc)
+	if (argc > 1)
+	{
+		while (count < argc)
 		{
 			ft_print_params(argv[count]);
 			count++;

@@ -1,17 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_div_mod.c                                       :+:      :+:    :+:   */
+/*   ft_ sqrt.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dofranci <dofranci@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/22 17:41:39 by dofranci          #+#    #+#             */
-/*   Updated: 2022/05/24 01:42:29 by dofranci         ###   ########.fr       */
+/*   Created: 2022/05/22 17:47:22 by dofranci          #+#    #+#             */
+/*   Updated: 2022/05/24 02:31:17 by dofranci         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_div_mod(int a, int b, int *div, int *mod)
+int	ft_sqrt(int nb)
 {
-	*div = a / b;
-	*mod = a % b;
+	int	result;
+
+	result = 1;
+	while (result < 46341 && (result * result) <= nb)
+	{
+		if ((result * result) == nb)
+		{
+			return (result);
+		}
+		result++;
+	}
+	return (0);
 }
